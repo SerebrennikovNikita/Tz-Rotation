@@ -28,13 +28,13 @@ public class Rotation : MonoBehaviour
 
     private void OnMouseDown()
     {
-        if (roationSpeed < 2f) //решил добавить немного больше чем изменение цвета, при каждом клике персоонаж начинает крутится быстрее и меняет лицо
+        if (roationSpeed < 2f) //after clicking on the character, it not only changes color, but also starts spinning faster and changes facial expressions
         {
             roationSpeed = roationSpeed * 2;
             character.material.SetTexture("_MainTex", secondFace);
             character.material.SetColor("_Color", Color.green);
         }
-        if (roationSpeed > 2.5f) //если раскрутить персоонажа слишком сильно он начнёт блевать
+        if (roationSpeed > 2.5f) //After reaching a high speed, he starts to puke.
         {
             roationSpeed = roationSpeed * 2;
             character.material.SetTexture("_MainTex", thirdFace);
